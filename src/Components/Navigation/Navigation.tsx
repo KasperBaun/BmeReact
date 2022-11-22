@@ -1,4 +1,4 @@
-import { Box, CssBaseline, Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material"
+import { Box, Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material"
 import React from "react";
 import { NavigationModel } from "../../Models/NavigationModel";
 import MailIcon from '@mui/icons-material/Mail';
@@ -19,11 +19,12 @@ export const Navigation: React.FC<INavigationProps> = function Navigation(props:
                         width: props.drawerWidth,
                         boxSizing: 'border-box'
                     },
+                    
                 }}
                 variant="permanent"
                 anchor="left"
             >
-                <List>
+                <List sx={{background: (theme) => theme.palette.background.default}}>
                     {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text) => {
                         return (
                             <ListItem key={text} disablePadding>

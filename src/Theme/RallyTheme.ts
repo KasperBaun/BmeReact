@@ -2,7 +2,7 @@ import { createTheme, ThemeOptions } from '@mui/material/styles';
 import RallyTypography from './Typography';
 
 const themeSettings: ThemeOptions = {
-
+   
     palette: {
 
         primary: {
@@ -24,22 +24,6 @@ const themeSettings: ThemeOptions = {
 
     typography: RallyTypography
 }
-
-// // context for color mode
-// export const ColorModeContext = createContext({
-//     toggleColorMode: () => { },
-// });
-
-// export const useMode = () => {
-//     const [mode, setMode] = useState("dark");
-
-//     const colorMode = useMemo(
-//         () => ({
-//             toggleColorMode: () =>
-//                 setMode((prev) => (prev === "light" ? "dark" : "light")),
-//         }),
-//         []
-//     );
 
 const RallyGreenTheme = createTheme(themeSettings);
 export default RallyGreenTheme;
