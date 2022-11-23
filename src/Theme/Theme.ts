@@ -21,7 +21,6 @@ const themeSettings: ThemeOptions = {
         // Surface = 344955
         
     },
-
     typography: RallyTypography
 }
 
