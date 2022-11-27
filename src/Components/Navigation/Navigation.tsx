@@ -2,10 +2,11 @@ import { Box, Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, Lis
 import React from "react";
 import { NavigationModel } from "../../Models/NavigationModel";
 import MailIcon from '@mui/icons-material/Mail';
+import { DrawerStyles } from "./../../Styles/Drawer"
 
 export interface INavigationProps {
     elements: NavigationModel[]
-    drawerWidth: number
+    //drawerWidth: number
 }
 
 export const Navigation: React.FC<INavigationProps> = function Navigation(props: INavigationProps) {
@@ -13,10 +14,10 @@ export const Navigation: React.FC<INavigationProps> = function Navigation(props:
         <Box sx={{ display: 'flex', width: 250}}  >
             <Drawer
                 sx={{
-                    width: props.drawerWidth,
+                    width: DrawerStyles.width,
                     flexShrink: 0,
                     '& .MuiDrawer-paper': {
-                        width: props.drawerWidth,
+                        width: DrawerStyles.width,
                         boxSizing: 'border-box'
                     },
                     

@@ -15,7 +15,7 @@ function App() {
   return (
     <ThemeProvider theme={RallyGreenTheme}>
       <CssBaseline />
-      <Navigation elements={navElements} drawerWidth={240} />
+      <Navigation elements={navElements} />
     </ThemeProvider>
   );
 }
