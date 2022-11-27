@@ -1,15 +1,15 @@
 import { Box, Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material"
 import React from "react";
-import { NavigationModel } from "../../Models/NavigationModel";
+import { Navigation } from "../../Models/Navigation";
 import MailIcon from '@mui/icons-material/Mail';
 import { DrawerStyles } from "./../../Styles/Drawer"
 
 export interface INavigationProps {
-    elements: NavigationModel[]
+    elements: Navigation[]
     //drawerWidth: number
 }
 
-export const Navigation: React.FC<INavigationProps> = function Navigation(props: INavigationProps) {
+export const NavMenu: React.FC<INavigationProps> = function Navigation(props: INavigationProps) {
     return (
         <Box sx={{ display: 'flex', width: 250}}  >
             <Drawer
