@@ -24,7 +24,8 @@ export const RallyDarkPalette: Palette = {
     },
     background: {
         default: '#344955',
-        paper: "#344955"
+        paper: "#344955",
+        
     },
     
     error: {

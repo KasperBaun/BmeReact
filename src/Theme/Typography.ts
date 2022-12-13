@@ -47,7 +47,6 @@ const RallyTypography: TypographyOptions = {
     }
 };
 
-
 function fontFamily(): string {
     return ["RobotoCondensed", "Roboto", "Helvetica", "Arial"].join(",")
 }

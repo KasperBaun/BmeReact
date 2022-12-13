@@ -1,29 +1,11 @@
 import { createTheme, ThemeOptions } from '@mui/material/styles';
+import { RallyDarkPalette } from './Palette';
 import RallyTypography from './Typography';
 
-const themeSettings: ThemeOptions = {
-   
-    palette: {
-
-        primary: {
-            main: '#045D56',
-            "500": '#1EB980',
-            "700": '#045D56'
-        },
-        secondary: {
-            main: '#0052cc',
-        },
-        background: {
-            default: '#344955',
-        }
-       
-        // Background = R4A6572
-        // Surface = 344955
-        
-    },
-
+const RallyThemeSettings: ThemeOptions = {
+    palette: RallyDarkPalette,
     typography: RallyTypography
-}
+};
 
-const RallyGreenTheme = createTheme(themeSettings);
+const RallyGreenTheme = createTheme(RallyThemeSettings);
 export default RallyGreenTheme;
