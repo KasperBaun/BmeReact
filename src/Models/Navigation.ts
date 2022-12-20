@@ -1,4 +1,4 @@
-export class NavigationModel {
+export class Navigation {
     Href: string = "";
     IconName: string = "";
     Key: string = "";
