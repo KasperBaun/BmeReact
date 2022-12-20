@@ -4,7 +4,7 @@ export class StorageService implements Storage {
     private static instance: StorageService;
     public storageSize: number = 0;
     private currentDeviceLocalStorageQuota: number = 0;
-    private keyCreationTimeMap = new Map<string, number>;
+    private keyCreationTimeMap = new Map<string, number>();
     private baseStorage: Storage;
     private prefix: string = "ATPEPCF";
     length: number = 0;
@@ -44,10 +44,12 @@ export class StorageService implements Storage {
 
     }
     public getCacheStatus(){
-        console.log("Current StorageService cache status: " + (this.storageSize/this.currentDeviceLocalStorageQuota)*100 + "%")
-        console.log("baseStorage.length: " + this.baseStorage.length);
-        console.log("this.storageSize: " + this.storageSize);
-        console.log("keyDateMap.count: "+ this.keyCreationTimeMap.size)
+        const cacheUsedInPercent = (this.storageSize/this.currentDeviceLocalStorageQuota)*100;
+        console.log("Cache used: " + cacheUsedInPercent.toFixed(2) + "% (" + this.storageSize/1000 +"/" + this.currentDeviceLocalStorageQuota +") kB");
+        //console.log("Maximum cache size for current device: " + this.currentDeviceLocalStorageQuota + " kB");
+        //console.log("Current cache size: " + this.storageSize + " kB");
+        //console.log("Elements in baseStorage: " + this.baseStorage.length);
+        //console.log("keyDateMap.count: "+ this.keyCreationTimeMap.size);
     }
     public clear(): void {
         this.length = this.baseStorage.length;
