@@ -1,21 +1,20 @@
 
 import './App.css';
 import { CssBaseline, ThemeProvider } from '@mui/material';
-import RallyGreenTheme from './Theme/Theme';
-import { NavMenu } from './Components/Navigation/Navigation';
-import { Navigation } from './Models/Navigation';
-
+import RallyGreenTheme from './Theme/RallyTheme';
+import { NavigationMenu } from './Components/Navigation/NavigationMenu';
+import Loading from './Components/Loading/Loading';
+import Website from './Pages/Website/Website';
+import AdminSite from './Pages/AdminSite/AdminSite';
 
 
 function App() {
 
-  const navElements: Navigation[] = [];
-  navElements.push({ Href: "home", IconName: "LeftChevron", Id: 1, Key: "nav1" });
-
   return (
     <ThemeProvider theme={RallyGreenTheme}>
       <CssBaseline />
-      <NavMenu elements={navElements} />
+      <Website/>
+      <AdminSite/>
     </ThemeProvider>
   );
 }
